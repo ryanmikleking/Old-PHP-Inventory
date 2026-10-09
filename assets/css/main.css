@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  background-color: #000000;
+}
+
+.login-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d4d0c8;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: 3px 3px 0 #000;
+  width: calc(100% - 2rem);
+  max-width: 380px;
+  min-height: 250px;
+}
+
+.input-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 6px;
+  background-color: #000080;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  width: 100%;
+}
+#login-form > div:not(#forgot) {
+  display: grid;
+  gap: 0.25rem;
+}
+#login-form input {
+  width: 100%;
+  min-width: 0;
+}
+#login-form button {
+  justify-self: start;
+}
+
+#login-form label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#login-form input {
+  padding: 5px;
+  border: 2px inset #d4d0c8;
+  border-radius: 0;
+  background-color: #ffffff;
+  font: inherit;
+}
+
+#login-form button {
+  padding: 5px 14px;
+  font: inherit;
+  margin-top: 0.5rem;
+  background-color: #d4d0c8;
+  color: #000000;
+  border: 2px solid;
+  border-color: #808080 #ffffff #808080 #ffffff;
+  border-radius: 0;
+  cursor: pointer;
+}
+#login-form button:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  background-color: #d4d0c8;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.close:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: none;
+}
+
+.close img {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: static;
+}
+
+.close-display {
+  display: none;
+  margin-top: 0.75rem;
+  padding: 8px;
+  color: #800000;
+  background-color: #d4d0c8;
+  border: 1px solid #808080;
+  font-size: 12px;
+}
+
+.form-content {
+  display: block;
+  padding: 0 1rem 1rem;
+}
+
+.login-title {
+  margin: 0;
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+/*# sourceMappingURL=main.css.map */

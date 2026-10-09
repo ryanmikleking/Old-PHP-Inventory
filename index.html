@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PHP Sign In Page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/icons/inventory-filled-outline-icon-design-illustration-manufacturing-units-symbol-on-white-background-eps-10-file-vector.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/icons/inventory-filled-outline-icon-design-illustration-manufacturing-units-symbol-on-white-background-eps-10-file-vector.ico"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="login-div">
+        <div class="input-box-header">
+          <span class="login-box-title">Login App</span>
+          <div class="close" id="close-btn">
+            <img src="./assets/icons/x-lg.svg" alt="close" />
+          </div>
+        </div>
+        <h1 class="login-title">Sign In</h1>
+        <div class="form-content">
+          <form method="POST" id="login-form">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+
+            <button type="submit">Sign In</button>
+            <div id="forgot"></div>
+
+            <p id="message"></p>
+          </form>
+          <div class="close-display" id="close-display">
+            Sorry, you cannot close the login screen!
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./assets/js/login.js"></script>
+</html>

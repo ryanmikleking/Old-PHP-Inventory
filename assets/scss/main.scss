@@ -1,0 +1,165 @@
+// ======================
+// Variables
+// ======================
+
+// colors
+$background: #c0c0c0;
+$surface: #d4d0c8;
+
+$primary: #000080;
+$primary-dark: #000040;
+$primary-light: #0000aa;
+
+$text: #000000;
+$text-muted: #404040;
+
+$border-light: #ffffff;
+$border-dark: #808080;
+$border-darker: #404040;
+
+$input-background: #ffffff;
+
+$success: #008000;
+$warning: #808000;
+$danger: #800000;
+
+// font families
+$font-family-console: "Courier New", Courier, monospace;
+$font-family-main: "MS Sans Serif", Tahoma, Arial, sans-serif;
+
+// base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: $font-family-main;
+  background-color: #000000;
+}
+.login-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: $surface;
+  border: 2px solid;
+  border-color: $border-light $border-dark $border-dark $border-light;
+
+  box-shadow: 3px 3px 0 #000;
+
+  width: calc(100% - 2rem);
+  max-width: 380px;
+  min-height: 250px;
+}
+.input-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 28px;
+  padding: 4px 6px;
+
+  background-color: $primary;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  width: 100%;
+  > div:not(#forgot) {
+    display: grid;
+    gap: 0.25rem;
+  }
+  input {
+    width: 100%;
+    min-width: 0;
+  }
+  button {
+    justify-self: start;
+  }
+}
+#login-form label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#login-form input {
+  padding: 5px;
+  border: 2px inset $surface;
+  border-radius: 0;
+  background-color: $input-background;
+  font: inherit;
+}
+#login-form button {
+  padding: 5px 14px;
+  font: inherit;
+  margin-top: 0.5rem;
+  background-color: $surface;
+  color: $text;
+  border: 2px solid;
+  border-color: $border-dark $border-light $border-dark $border-light;
+  border-radius: 0;
+  cursor: pointer;
+  &:active {
+    border-color: $border-dark $border-light $border-light $border-dark;
+  }
+}
+.close {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+
+  background-color: $surface;
+  border: 1px solid;
+  border-color: $border-light $border-dark $border-dark $border-light;
+
+  cursor: pointer;
+  box-shadow: none;
+}
+.close:active {
+  border-color: $border-dark $border-light $border-light $border-dark;
+  box-shadow: none;
+}
+.close img {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: static;
+}
+.close-display {
+  display: none;
+  margin-top: 0.75rem;
+  padding: 8px;
+
+  color: $danger;
+  background-color: $surface;
+  border: 1px solid $border-dark;
+  font-size: 12px;
+}
+.form-content {
+  display: block;
+  padding: 0 1rem 1rem;
+}
+.login-title {
+  margin: 0;
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.1rem;
+  text-align: left;
+}
