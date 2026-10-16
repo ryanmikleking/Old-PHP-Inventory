@@ -1,6 +1,6 @@
 <?php
 
-require_once '../config/database.php';
+require_once __DIR__. '/../config/database.php';
 
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
@@ -18,11 +18,12 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$user || !password_verify($password, $user['password_hash'])) {
     echo json_encode([
         'success' => False,
-        'message' => 'Email or password is incorrect'
+        'message' => 'Email or password is incorrect',
     ]);
 
     exit;
 }
 echo json_encode([
-    'success' => True
+    'success' => True,
+    'message' => __DIR__,
 ]);
